@@ -8,7 +8,7 @@ public class Student {
     private String lastName;
     private int gradeYear;
     private String studentId;
-    private String courses = null;
+    private String courses = "";
     private int tuitionBalance = 0;
     private static int costOfCourse = 600;
     private static int id = 1000;
@@ -45,7 +45,7 @@ public class Student {
             String course = in.nextLine();
 
             if (!course.equals("Q")) {
-                courses += "\n" + course;
+                courses += "\n " + course;
                 tuitionBalance += costOfCourse;
             } else {
                 break;
@@ -68,6 +68,16 @@ public class Student {
         tuitionBalance = tuitionBalance - payment;
         System.out.println("Thank you for your payment of $" + payment);
         viewBalance();
+    }
+
+    //Show Info
+    public String toString() {
+        return "Name: " + firstName + " " + lastName +
+                "\nGrade Level: " + gradeYear +
+                "\nStudentId: " + studentId +
+                "\nCourses enrolled: " + courses +
+                "\nBalance: $" + tuitionBalance +
+                "\n";
     }
 
 }
