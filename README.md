@@ -1,3 +1,3 @@
 # University Student Database App
 
-A basic application for Uninversity students written in Java.
+A basic application for University students written in Java.
